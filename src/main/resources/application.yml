@@ -15,7 +15,7 @@ spring:
         name: springbootdcb
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: Trickyquest@5786
+        password:root
         url: jdbc:mysql://localhost:3306/dcbapp
         username: root
     jpa:
@@ -34,7 +34,7 @@ spring:
         name: springbootdcb
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: Trickyquest@5786
+        password: root
         url: jdbc:mysql://localhost:3306/dcbapp-qa
         username: root
     jpa:
@@ -58,7 +58,7 @@ spring:
         name: springbootdcb
     datasource:
         driver-class-name: com.mysql.cj.jdbc.Driver
-        password: Trickyquest@5786
+        password: root
         url: jdbc:mysql://localhost:3306/dcbapp-prod
         username: root
     jpa:
