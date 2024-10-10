@@ -1,0 +1,67 @@
+server:
+    port: 8080
+
+spring:
+  profiles:
+    active: qa
+---
+hello:
+    message: in hello method of home controller
+spring:
+    config:
+     activate:
+      on-profile: dev
+    application:
+        name: springbootdcb
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: Trickyquest@5786
+        url: jdbc:mysql://localhost:3306/dcbapp
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+        
+---
+hello:
+    message: in hello method of home controller
+spring:
+    config:
+     activate:
+      on-profile: qa
+    application:
+        name: springbootdcb
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: Trickyquest@5786
+        url: jdbc:mysql://localhost:3306/dcbapp-qa
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+management:
+  endpoints:
+       web:
+          exposure:
+              include: "*"
+              exclude: "env,beans"
+---
+hello:
+    message: in hello method of home controller
+spring:
+    config:
+     activate:
+      on-profile: prod
+    application:
+        name: springbootdcb
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: Trickyquest@5786
+        url: jdbc:mysql://localhost:3306/dcbapp-prod
+        username: root
+    jpa:
+        hibernate:
+            ddl-auto: update
+        show-sql: true
